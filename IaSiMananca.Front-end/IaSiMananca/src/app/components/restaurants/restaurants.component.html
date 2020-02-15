@@ -1,0 +1,48 @@
+<!-- <body class="animate-in">
+    <div class="col-md-9">
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <input type="text" class="form-control" placeholder="enter restaurant name" [(ngModel)]="customFilterObj.search.name">
+            </div>
+        </div>
+    </div> -->
+
+<body class="content animate-in">
+    <table class="table">
+        <thead>
+            <tr>
+                <th (click)="setFieldName('name')">Name A-Z
+                    <span class="glyphicon glyphicon-sort" aria-hidden="true" style="margin-left : 5px"></span>
+                </th>
+                <th (click)="setFieldName('rating')">Rating
+                    <span class="glyphicon glyphicon-sort" aria-hidden="true" style="margin-left : 5px"></span>
+                </th>
+
+            </tr>
+        </thead>
+    </table>
+    <div class="row">
+        <!-- | orderBy: order : false : true -->
+        <div *ngFor="let restaurant of restaurants | sortBy : selectedField  |  filter : customFilterObj" class="card  col-sm-6 col-md-4 col-lg-3" style="width: 18rem;">
+            <div class="item">
+                <a [routerLink]="['../restaurantPage/', restaurant.id]">
+                    <img class="card-img-top" src="http://bodminmagazine.com/wp-content/uploads/2015/04/Foody.jpg" alt=" Card image cap ">
+                </a>
+            </div>
+            <div class="card-body ">
+                <h5 class="card-title ">{{restaurant.name}}</h5>
+                <p class="card-text ">{{restaurant.type}}</p>
+                <p class="card-text">Rating: {{restaurant.rating.toString().substr(0,4)}}/10</p>
+
+                <div class="row float-right">
+                    <a [routerLink]="['./', restaurant.id]" class="btn btn-dark">
+                        <i class="fa fa-1x fa-edit text-light"></i> Edit</a>
+                    <a class="btn btn-danger mx-1" (click)="deleteRestaurant(restaurant)">
+                        <i class="fa fa-1x fa-trash text-light"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

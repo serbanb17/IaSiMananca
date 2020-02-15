@@ -1,0 +1,97 @@
+.logo-text {
+    padding: 22px 20px;
+    height: 80px;
+    font-size: 23px;
+
+}
+
+.row {
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    font-family: Quicksand;
+    width:100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.fixed-top {
+    background-color: #2B2D42;
+}
+
+.main-nav {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.main-nav li a {
+    text-transform: uppercase;
+    color: #EDF2F4;
+    text-decoration: none;
+    font-size: 110%;
+    font-weight: bold;
+}
+
+.main-nav li a:focus {
+    outline: none;
+}
+
+.main-nav li .dropdown-effect:hover {
+    color: #EDF2F4;
+    border-bottom: 2px solid #EDF2F4;
+    transition: all 0.3s ease-in;
+    padding: 20px 0;
+}
+
+.content{
+    margin-top:100px;
+}
+
+.dropbtn {
+    background-color: #2B2D42;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #EDF2F4;
+    text-decoration: none;
+    font-size: 110%;
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2B2D42;
+    z-index: 1;
+    width: 275px;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    display: block;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover{
+    color: #EDF2F4;
+}

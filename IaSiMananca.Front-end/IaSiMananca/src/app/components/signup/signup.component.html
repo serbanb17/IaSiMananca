@@ -1,0 +1,53 @@
+
+
+<body>
+
+  <div class="login-box">
+    <h1>Signup</h1>
+    <div *ngIf="restaurantUser">
+      <form #form="ngForm" (ngSubmit)="onSubmit()">
+        <fieldset>
+          <div class="webflow-style-input">
+            <div class="controls">
+              <input type="text" id="user" placeholder="Enter your username" [(ngModel)]="restaurantUser.user" name="Username" required>
+            </div>
+          </div>
+
+          <div class="webflow-style-input">
+            <div class="controls">
+              <input type="text" id="email" name="email" placeholder="example@gmail.com" [(ngModel)]="restaurantUser.email" required>
+            </div>
+          </div>
+
+          <div class="webflow-style-input">
+            <div class="controls">
+              <input type="password" id="password" name="password" placeholder="Password" [(ngModel)]="restaurantUser.password" required>
+            </div>
+          </div>
+
+          <!-- <div class="control-group">
+      <label class="control-label" for="restaurant">Restaurant</label>
+      <div class="controls">
+      <select class="form-control" id="restaurant" [(ngModel)]="restaurantUser.restaurantId" name="restaurant" required>
+        <option *ngFor="let restaurant of restaurants" [value]="restaurant.id">{{restaurant.name}}</option>
+      </select>
+      </div>
+      
+    </div> -->
+
+          <div class="controls">
+            <button type="submit" class="btn btn-success" [disabled]="!form.valid">Register</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+
+
+</body>
+<div *ngIf="restaurantUser">
+  <div>{{restaurantUser.user}}</div>
+  <div>{{restaurantUser.password}}</div>
+  <div>{{restaurantUser.email}}</div>
+</div>

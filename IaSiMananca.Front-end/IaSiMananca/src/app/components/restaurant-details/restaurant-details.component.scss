@@ -1,0 +1,50 @@
+.content{
+    font-family: Quicksand;
+    width: 100%;
+    padding: 30px;
+    background: #EDF2F4;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+
+}
+
+.content h2{
+    background: #2B2D42;
+    text-transform: uppercase;
+    font-family: Quicksand;
+    color: #EDF2F4;
+    font-weight: 100;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.content input[type="text"]{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    font-family: Quicksand;
+    margin-bottom: 10px;
+    height: 45px;
+}
+
+button{
+    background: #2B2D42;
+    text-transform: uppercase;
+    font-family: Quicksand;
+    color: #EDF2F4;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    width: 100%;
+}

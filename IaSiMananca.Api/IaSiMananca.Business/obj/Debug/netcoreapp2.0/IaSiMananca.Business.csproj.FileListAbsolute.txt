@@ -1,0 +1,12 @@
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.Business\bin\Debug\netcoreapp2.0\IaSiMananca.Business.deps.json
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.Business\bin\Debug\netcoreapp2.0\IaSiMananca.Business.dll
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.Business\bin\Debug\netcoreapp2.0\IaSiMananca.Business.pdb
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.Business\bin\Debug\netcoreapp2.0\IaSiMananca.DataAccess.dll
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.Business\bin\Debug\netcoreapp2.0\IaSiMananca.DataAccess.pdb
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.Business\obj\Debug\netcoreapp2.0\IaSiMananca.Business.csprojAssemblyReference.cache
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.Business\obj\Debug\netcoreapp2.0\IaSiMananca.Business.csproj.CoreCompileInputs.cache
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.Business\obj\Debug\netcoreapp2.0\IaSiMananca.Business.AssemblyInfoInputs.cache
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.Business\obj\Debug\netcoreapp2.0\IaSiMananca.Business.AssemblyInfo.cs
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.Business\obj\Debug\netcoreapp2.0\IaSiMananca.Business.csproj.CopyComplete
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.Business\obj\Debug\netcoreapp2.0\IaSiMananca.Business.dll
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.Business\obj\Debug\netcoreapp2.0\IaSiMananca.Business.pdb

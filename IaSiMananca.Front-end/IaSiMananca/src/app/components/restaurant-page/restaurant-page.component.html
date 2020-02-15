@@ -1,0 +1,86 @@
+<body class="animate-in">
+    <section class="content">
+        <div class="jumbotron ">
+            <div class="col-sm-8 mx-auto">
+                <h1>{{ restaurant.name }}</h1>
+                <p>
+                    <strong>Type: </strong>{{restaurant.type}}</p>
+                <p>
+                    <strong>Schedule: </strong>{{ restaurant.openingClosingTime}}</p>
+                <p>
+                    <strong>Phone Number: </strong>{{ restaurant.phoneNumber }}</p>
+                <p>
+                    <strong>Address: </strong>{{ restaurant.address}}</p>
+                <p>
+                    <strong>Rating: </strong> {{ restaurant.rating.toString().substr(0,4) }}</p>
+                <p>
+                    <strong>WebSite: </strong>
+                    <a href="http://{{restaurant.website}}" target="_blank">{{restaurant.website}}</a>
+                </p>
+                <!-- <p>
+          <a class="btn btn-primary" href="../../components/navbar/" role="button">Edit restaurant info</a>
+      </p> -->
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th (click)="setFieldName('dishName')">Name A-Z
+                        <span class="glyphicon glyphicon-sort" aria-hidden="true" style="margin-left : 5px"></span>
+                    </th>
+                    <th (click)="setFieldName('price')">Price
+                        <span class="glyphicon glyphicon-sort" aria-hidden="true" style="margin-left : 5px"></span>
+                    </th>
+
+                </tr>
+            </thead>
+        </table>
+
+        <div class="row">
+            <div *ngFor="let dish of dishes  | sortBy : selectedField" class="card  col-sm-6 col-md-4 col-lg-3" style="width: 18rem;">
+
+                <img class="card-img-top" src="http://bodminmagazine.com/wp-content/uploads/2015/04/Foody.jpg" alt=" Card image cap ">
+                <div class="card-body ">
+                    <h5 class="card-title ">{{dish.dishName}}</h5>
+                    <p class="card-text ">
+                        <strong>Category:</strong> {{dish.category}}</p>
+                    <p class="card-text">
+                        <strong>Ingredients:</strong> {{dish.ingredients}}</p>
+                    <p class="card-text">
+                        <strong>Price:</strong> {{dish.price}}</p>
+                    <p class="card-text">
+                        <strong>Weigth:</strong> {{dish.weight}}g</p>
+
+
+
+
+                    <div class="row float-right">
+                        <a [routerLink]="['../../restaurant-dish/', dish.id]" class="btn btn-dark">
+                            <i class="fa fa-1x fa-edit text-light"></i> Edit</a>
+                        <a class="btn btn-danger mx-1" (click)="deleteRestaurantDish(dish)">
+                            <i class="fa fa-1x fa-trash text-light"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <span id="reviewsSubtitle">Reviews</span>
+        <a href="/add-review/{{restaurant.id}}">
+            <span id="addNewReviewButton" class="badge badge-success">Add New +</span>
+        </a>
+        <br>
+
+        <div id="reviewCard" class="card" style="width: 18rem; " *ngFor="let review of reviews; let i = index" style="display: inline-block; margin: 20px">
+            <div class="card-body">
+                <h5 class="card-title">{{review.nameUser}}: {{review.commentDate | date: 'shortDate'}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{review.order}}: {{review.rating}}</h6>
+                <p class="card-text">{{review.comment}}</p>
+                <a class="card-link" href="/update-review/{{review.id}}">Modifică</a>
+                <a class="card-link" (click)="deleteReview(review.id)">Șterge</a>
+            </div>
+        </div>
+    </section>
+</body>

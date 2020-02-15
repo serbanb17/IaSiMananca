@@ -1,0 +1,66 @@
+<!--daca apas undeva si sunt logat ar trebui sa vad asta-->
+
+<div class="content">
+
+
+    <h2>Add new restaurant</h2>
+    <div *ngIf="restaurant">
+        <form #form="ngForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="restaurantNameFormControl"></label>
+                <input type="text" #name="ngModel" class="form-control" id="restaurantNameFormControl" placeholder="Restaurant name" [(ngModel)]="restaurant.name"
+                    name="name" required>
+
+                <div [hidden]="name.valid" class="alert alert-danger my-2" role="alert">
+                    Restaurant name is required!
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label for="restaurantScheduleFormControl"></label>
+                <input type="text" class="form-control" id="restaurantScheduleFormControl" placeholder="Restaurant schedule" [ngModel]="restaurant.openingClosingTime"
+                    (ngModelChange)="restaurant.openingClosingTime = $event" name="schedule" required>
+            </div>
+            <div class="form-group">
+                <label for="restaurantTypeFormControl"></label>
+                <input type="text" class="form-control" id="restaurantTypeFormControl" placeholder="Restaurant type" [ngModel]="restaurant.type"
+                    (ngModelChange)="restaurant.type = $event" name="type" required>
+            </div>
+            <!-- 
+        <div class="form-group">
+            <label for="restaurantType">Restaurant type</label>
+            <select class="form-control" id="restaurantType" [(ngModel)]="restaurant.type" name="restaurantType" required>
+        <option *ngFor="let restaurantType of restaurantTypes" [value]="restaurantType.id">{{restaurantType.name}}</option>
+      </select>
+        </div> -->
+
+
+            <div class="form-group">
+                <label for="restaurantWebsiteFormControl"></label>
+                <input #website="ngModel" type="text" class="form-control" id="restaurantWebsiteFormControl" placeholder="Website" [(ngModel)]="restaurant.website"
+                    name="website" required>
+            </div>
+            <button type="submit" class="btn btn-dark" [disabled]="!form.valid">Submit</button>
+        </form>
+    </div>
+    <div class="jumbotron">
+        <div class="col-sm-8 mx-auto">
+            <h1>{{ restaurant.name }}</h1>
+            <p>
+                <strong>Schedule: </strong>{{ restaurant.openingClosingTime}}</p>
+            <p>
+                <strong>Phone Number: </strong>{{ restaurant.phoneNumber }}</p>
+            <p>
+                <strong>Address: </strong>{{ restaurant.address }}</p>
+            <p>
+                <strong>Rating: </strong> {{ restaurant.rating }}</p>
+            <p>
+                <strong>WebSite: </strong>
+                <a href="http://{{restaurant.website}}" target="_blank">{{restaurant.website}}</a>
+            </p>
+            <!-- <p>
+          <a class="btn btn-primary" href="../../components/navbar/" role="button">Edit restaurant info</a>
+      </p> -->
+        </div>
+    </div>
+</div>

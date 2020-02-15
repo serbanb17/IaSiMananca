@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+</head>
+<!-- <form #form="ngForm" class="form-horizontal" (ngSubmit)="onSubmit()"></form> -->
+
+<body>
+
+    <div class="login-box">
+        <h1>Login</h1>
+        <div class="webflow-style-input">
+            <input type="text" placeholder="Username" name="Username" required>
+        </div>
+
+        <div class="webflow-style-input">
+            <input type="password" name="password" placeholder="Password" required>
+        </div>
+
+        <input class="btn" type="button" value="Login" [disabled]="!form.valid" (ngSubmit)="onSubmit()">
+
+    </div>
+    <!-- </form> -->
+
+</body>
+
+</html>

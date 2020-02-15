@@ -1,0 +1,76 @@
+body{
+    font-family: Quicksand;
+}
+
+input { 
+    border-style: none; 
+    background: transparent; 
+    outline: none; 
+}
+
+$input-background:#2B2D42;
+
+@keyframes gradient { 
+  0%{background-position:0 0}
+  100%{background-position:100% 0}
+}
+
+.webflow-style-input {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-size: 24px;
+  color: #EDF2F4;
+  max-width: 100%;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  padding: 1.4rem 2rem 1.6rem;
+  background: $input-background;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    color: #EDF2F4;
+    z-index: 999;
+    height: 10px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-position: 0% 0%;
+    background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+    background-size: 500% auto;
+    animation: gradient 3s linear infinite;
+  }
+}
+
+.webflow-style-input input {
+  flex-grow: 1;
+  color: #EDF2F4;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+  &::-webkit-input-placeholder {
+    color: rgb(107, 107, 107);
+  }
+}
+.login-box{
+    position:absolute;
+    left: 30%;
+    background-color: #2B2D42;
+    padding: 50px;
+}
+
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    color: #EDF2F4;
+}
+
+.btn{
+    width: 100%;
+    font-size: 15px;
+    color: #EDF2F4;
+    border: 2px solid;
+}

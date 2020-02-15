@@ -1,0 +1,86 @@
+
+.card {
+  border: 0;
+}
+
+body{
+  font-family: Quicksand;
+}
+
+button { 
+  padding: 0; 
+  background: none; 
+  border: none; 
+  outline: none; 
+}
+
+$input-background:#2B2D42;
+
+@keyframes gradient { 
+  0%{background-position:0 0}
+  100%{background-position:100% 0}
+}
+
+.webflow-style-input {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-size: 24px;
+  color: #EDF2F4;
+  max-width: 100%;
+  margin-bottom: 10px;
+  padding: 1.4rem 2rem 1.6rem;
+  background: $input-background;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    color: #EDF2F4;
+    z-index: 999;
+    height: 10px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-position: 0% 0%;
+    background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+    background-size: 500% auto;
+    animation: gradient 3s linear infinite;
+  }
+}
+
+.webflow-style-input input {
+  border-style: none; 
+  outline: none; 
+  color: #EDF2F4;
+  background: transparent;
+  font-size: 1.8rem;
+  vertical-align: middle;
+  &::-webkit-input-placeholder {
+    color: rgb(107, 107, 107);
+  }
+}
+
+.webflow-style-input button {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+}
+
+.search-box{
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: #2B2D42;
+  padding: 10px;
+}
+
+h3{
+  border: 2px solid #EDF2F4;
+  background-color: #ffffff;
+  color: #2B2D42;
+  text-align: center;
+  padding: 15px;
+  width: 30%;
+  margin-left: 35%;
+}

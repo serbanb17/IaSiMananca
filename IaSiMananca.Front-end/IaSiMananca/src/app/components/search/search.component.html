@@ -1,0 +1,51 @@
+<body>
+    <div class="search-box animated zoomIn">
+
+        <form (ngSubmit)="doSearch()">
+            <div class="webflow-style-input">
+                <input type="text" class="form-control" placeholder="Enter search string" name="search" [(ngModel)]="term" required>
+
+                <button type="submit">
+                    <i class="fa fa-1x fa-search text-light"></i>
+                </button>
+            </div>
+        </form>
+
+    </div>
+
+
+
+    <div *ngIf="show">
+        <span>
+            <h3>Rezultate gasite</h3>
+        </span>
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th (click)="setFieldName('name')">Name A-Z
+                        <span class="glyphicon glyphicon-sort" aria-hidden="true" style="margin-left : 5px"></span>
+                    </th>
+                    <th (click)="setFieldName('rating')">Rating
+                        <span class="glyphicon glyphicon-sort" aria-hidden="true" style="margin-left : 5px"></span>
+                    </th>
+
+                </tr>
+            </thead>
+        </table>
+        <div class="row">
+
+            <!-- | orderBy: order : false : true -->
+            <div *ngFor="let restaurant of restaurants | sortBy : selectedField " class="card  col-sm-6 col-md-4 col-lg-3" style="width: 18rem;">
+                <a [routerLink]="['../restaurantPage/', restaurant.id]">
+                    <img class="card-img-top" src="http://bodminmagazine.com/wp-content/uploads/2015/04/Foody.jpg" alt=" Card image cap ">
+                </a>
+                <div class="card-body ">
+                    <h5 class="card-title ">{{restaurant.name}}</h5>
+                    <p class="card-text ">{{restaurant.type}}</p>
+                    <p class="card-text">Rating: {{restaurant.rating}}/5</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

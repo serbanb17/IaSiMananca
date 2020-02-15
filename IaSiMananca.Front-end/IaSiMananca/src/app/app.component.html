@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
+</head>
+
+<body>
+    <div class="row fixed-top">
+        <ul class="main-nav">
+            <li>
+                <i class="fas fa-2x fa-concierge-bell text-info" [routerLink]="['./restaurants']"></i>
+                <span class=" text-light mx-3 logo-text" [routerLink]="['./restaurants']">IaSiMananca</span>
+            </li>
+            <li>
+                <a class="dropdown-effect" [routerLink]="['./restaurants']">
+                    <i class="fa fa-1x fa-list-alt text-light"></i> Restaurants </a>
+            </li>
+            <li>
+                <a class="dropdown-effect" [routerLink]="['./about']">
+                    <i class="fa fa-1x fa-info text-light"></i> About</a>
+            </li>
+            <li>
+                <a class="dropdown-effect" [routerLink]="['./contact']">
+                    <i class="fa fa-1x fa-question text-light"></i> Contact us</a>
+            </li>
+            <li>
+                <a class="dropdown-effect" [routerLink]="['./search']">
+                    <i class="fa fa-1x fa-search text-light"></i> Search</a>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">ADD</button>
+                    <div class="dropdown-content">
+                        <li>
+                            <a [routerLink]="['./restaurant-dish/addNew']">
+                                <i class="fa fa-1x fa-plus-square text-light"></i> Add new dish</a>
+                        </li>
+                        <li>
+                            <a [routerLink]="['./restaurants/addNew']">
+                                <i class="fa fa-1x fa-plus-square text-light"></i> Add new Restaurant</a>
+                        </li>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a class="dropdown-effect" [routerLink]="['./login']" style="margin-right: 20px;">
+                    <i class="fa fa-user-plus"></i>
+                    <span style="margin-left: 5px;">Login</span>
+                </a>
+                <a class="dropdown-effect" [routerLink]="['./signup/addNew']">
+                    <i class="fa fa-sign-in"></i>
+                    <span style="margin-left: 5px;">Signup</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+<div class="content container-fluid col-10">
+    <router-outlet></router-outlet>
+</div>
+
+</html>

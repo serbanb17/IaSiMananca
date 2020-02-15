@@ -1,0 +1,17 @@
+<div class="content row">
+    <div *ngFor="let restaurantDish of restaurantDishes  " class="card  col-sm-6 col-md-4 col-lg-3" style="width: 18rem;">
+        <img class="card-img-top" src="http://bodminmagazine.com/wp-content/uploads/2015/04/Foody.jpg" alt=" Card image cap ">
+        <div class="card-body ">
+            <h5 class="card-title ">{{restaurantDish.dishName}}</h5>
+            <p class="card-text ">{{restaurantDish.category}}</p>
+            <p class="card-text ">{{restaurantDish.ingredients}}</p>
+            <p class="card-text ">{{restaurantDish.weight}} g, cost: {{restaurantDish.price}}</p>
+            <div class="row float-right">
+                <a [routerLink]="['./', restaurantDish.id]" class="btn btn-dark">
+                    <i class="fa fa-1x fa-edit text-light"></i> Edit</a>
+                <a class="btn btn-danger mx-1" (click)="deleteRestaurantDish(restaurantDish)">
+                    <i class="fa fa-1x fa-trash text-light"></i>
+                </a>
+            </div>
+        </div>
+    </div>

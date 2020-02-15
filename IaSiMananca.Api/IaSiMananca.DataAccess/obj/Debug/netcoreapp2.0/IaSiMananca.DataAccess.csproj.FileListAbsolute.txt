@@ -1,0 +1,11 @@
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.DataAccess\bin\Debug\netcoreapp2.0\IaSiMananca.DataAccess.deps.json
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.DataAccess\bin\Debug\netcoreapp2.0\IaSiMananca.DataAccess.runtimeconfig.json
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.DataAccess\bin\Debug\netcoreapp2.0\IaSiMananca.DataAccess.runtimeconfig.dev.json
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.DataAccess\bin\Debug\netcoreapp2.0\IaSiMananca.DataAccess.dll
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.DataAccess\bin\Debug\netcoreapp2.0\IaSiMananca.DataAccess.pdb
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.DataAccess\obj\Debug\netcoreapp2.0\IaSiMananca.DataAccess.csprojAssemblyReference.cache
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.DataAccess\obj\Debug\netcoreapp2.0\IaSiMananca.DataAccess.csproj.CoreCompileInputs.cache
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.DataAccess\obj\Debug\netcoreapp2.0\IaSiMananca.DataAccess.AssemblyInfoInputs.cache
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.DataAccess\obj\Debug\netcoreapp2.0\IaSiMananca.DataAccess.AssemblyInfo.cs
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.DataAccess\obj\Debug\netcoreapp2.0\IaSiMananca.DataAccess.dll
+D:\faculta\IaSiMananca\IaSiMananca.Api\IaSiMananca.DataAccess\obj\Debug\netcoreapp2.0\IaSiMananca.DataAccess.pdb

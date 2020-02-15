@@ -1,0 +1,47 @@
+<body class="content">
+    <div *ngIf="review" id="formContainer">
+        <form #form="ngForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="reviewUsernameFormControl">Username</label>
+                <input type="text" #username="ngModel" class="form-control" id="reviewUsernameFormControl" placeholder="your name..." [(ngModel)]="review.nameUser" name="username" required>
+                <div [hidden]="username.valid" class="alert alert-danger my-2" role="alert">
+                    Name is required!
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="reviewOrderFormControl">Order</label>
+                <select class="form-control" id="reviewOrderFormControl" [(ngModel)]="review.order" name="order" required>
+            <option *ngFor="let order of orders" [value]="order.dishName">{{order.dishName}}</option>
+          </select>
+            </div>
+
+            <div class="form-group">
+                <label for="reviewOrderFormControl">The date when you were at the restaurant</label>
+                <input type="date" #commentDate="ngModel" class="form-control" id="reviewDateFormControl" placeholder="Event date" [(ngModel)]="review.commentDate" name="commentDate" required>
+                <div [hidden]="commentDate.valid" class="alert alert-danger my-2" role="alert">
+                    Date is required!
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="reviewCommentFormControl">Comment</label>
+                <input type="text" #comment="ngModel" class="form-control" id="reviewCommentFormControl" maxlength=300 placeholder="your comment..." [(ngModel)]="review.comment" name="comment" required>
+                <div [hidden]="comment.valid" class="alert alert-danger my-2" role="alert">
+                    Comment is required!
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="reviewRatingFormControl">Rating</label>
+                <input type="number" #rating="ngModel" class="form-control" id="reviewRatingFormControl" placeholder="your rating..." min=0 max=10 [(ngModel)]="review.rating" name="rating" required>
+                <div [hidden]="rating.valid" class="alert alert-danger my-2" role="alert">
+                    Rating is required!
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-dark" [disabled]="!form.valid">Submit</button>
+        </form>
+    </div>
+</body>

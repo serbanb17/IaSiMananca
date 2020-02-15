@@ -1,0 +1,67 @@
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">;
+</head>
+
+<body class="content">
+  <h2>Add new dish</h2>
+  <div *ngIf="restaurantDish">
+    <form #form="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="dishNameFormControl"></label>
+        <input type="text" #dishName="ngModel" class="form-control" id="dishNameFormControl" placeholder="Enter the name of the dish"
+          [(ngModel)]="restaurantDish.dishName" name="dishName" required>
+
+        <div [hidden]="dishName.valid" class="alert alert-danger my-2" role="alert">
+          Dish name is required!
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <label id="restaurantLabel" for="restaurant">Restaurant</label>
+        <select class="form-control" id="restaurant" [(ngModel)]="restaurantDish.restaurantId" name="restaurant" required>
+          <option *ngFor="let restaurant of restaurants" [value]="restaurant.id">{{restaurant.name}}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="dishCategoryFormControl"></label>
+        <input type="text" class="form-control" id="dishCategoryFormControl" placeholder="Dish category" [(ngModel)]="restaurantDish.category"
+          name="dishCategory" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dishIngredientsFormControl"></label>
+        <input #dishIngredients="ngModel" type="text" class="form-control" id="dishIngredientsFormControl" placeholder="List the ingredients"
+          [(ngModel)]="restaurantDish.ingredients" name="dishIngredients" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dishWeightFormControl"></label>
+        <input #dishWeight="ngModel" type="text" class="form-control" id="dishWeightFormControl" placeholder="Enter the weight"
+          [(ngModel)]="restaurantDish.weight" name="dishWeight" required>
+      </div>
+
+      <div class="form-group">
+        <label for="disPriceFormControl"></label>
+        <input #dishPrice="ngModel" type="text" class="form-control" id="dishPriceFormControl" placeholder="Enter the price" [(ngModel)]="restaurantDish.price"
+          name="dishPrice" required>
+      </div>
+
+      <button type="submit" class="btn btn-dark" [disabled]="!form.valid">Submit</button>
+    </form>
+  </div>
+
+  <div *ngIf="restaurantDish">
+    <div>{{restaurantDish.dishName}}</div>
+    <div>{{restaurantDish.category}}</div>
+    <div>{{restaurantDish.ingredients}}</div>
+    <div>{{restaurantDish.price}}</div>
+    <div>{{restaurantDish.weight}}</div>
+    <div>{{restaurantDish.restaurantId}}</div>
+  </div>
+</body>
+
+</html>
