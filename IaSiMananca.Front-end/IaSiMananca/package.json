@@ -23,7 +23,7 @@
         "@ng-select/ng-select": "^2.3.2",
         "animate.css": "^3.6.1",
         "core-js": "^2.5.4",
-        "jquery": "^1.12.4",
+        "jquery": "^3.5.0",
         "jquery-parallax.js": "^1.5.0",
         "ngx-filter-pipe": "^2.1.0",
         "ngx-order-pipe": "^2.0.1",
